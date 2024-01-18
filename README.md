@@ -22,3 +22,9 @@
 
 4. Type Conversion in Go:
 - String to byte size: []byte("Hi there") = convert "Hi there" to slice of byte
+
+5. Pointers:
+- Go is pass by value language - Go will copy the value of parameter variable and store it in a new variable
+- jimPointer := &jim - & - give access to memory address of jim
+- variableName *type - this is a type description: It means we are working with a pointer to a person
+- *variableName - give value in this memory address. This is an operator - It means we want to manipulate the value pointer is referencing
