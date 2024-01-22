@@ -1,4 +1,4 @@
-# Go
+# Go - The Complete Developer's Guide (Golang, udemy)
 
 1. Go
 - Statically typed language - we have to specify data type while assigning variable. Although, it can be inferred from the right hand side value. 
@@ -19,6 +19,7 @@
 3. Slice
 - slice_value[startIndexIncluding: endIndexExcluding]
 - slice_value[:2] or slice_value[3:]
+- A slice has 3 attributes internally: ptr to head(head of the array), capacity and length
 
 4. Type Conversion in Go:
 - String to byte size: []byte("Hi there") = convert "Hi there" to slice of byte
@@ -28,3 +29,15 @@
 - jimPointer := &jim - & - give access to memory address of jim
 - variableName *type - this is a type description: It means we are working with a pointer to a person
 - *variableName - give value in this memory address. This is an operator - It means we want to manipulate the value pointer is referencing
+- *** Whenever you pass an integer, float, string, or struct into a function, it is pass by value but not applcable for slice ***
+
+6. Gotchas with pointers
+- In struct you need pointers but in a slice, you do not because slice has 3 attributes internally: ptr to head(head of the array), capacity and length. So when value of the slice is copied(pass by value), the pointer is copied as well.
+- DS that behave like slices: maps, channels, pointers, functions
+- DS who don't: int, float, string, bool, structs
+
+7. Map:
+- All Keys and all Values should be of same type
+
+8. Struct vs Map:
+- ![Alt text](images/image.png)
