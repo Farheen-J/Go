@@ -45,7 +45,7 @@
 9. Interfaces:
 - Problems that interfaces solve:
     * Reuse code (functions) for different datatypes
-    * Go does not support function overloading by default. ![Without interfaces](images/interfaces_need.png) we have to handle different types individually
+    * Go does not support function overloading by default. Without interfaces we have to handle different types individually. ![Without interfaces](images/interfaces_need.png)
 - Datatypes are of two type:
     * Concrete type: map, struct, int, string - types the give values
     * Interface type:
@@ -62,7 +62,11 @@
         Reader,
         Closer,
     }
-    c. Reader Interface helps handle different ![sources of input](images/interfaces_need.png). It requires you to ![implement](images/reader_interface.png) Reader interface and it contains Read function that outputs []byte. Reader interface gives common point of contact for all data types. 
-    d. ![Writer](images/writer.png) interface = condensed form of Reader. ![Writer vs Reader](images/reader_vs_writer.png). To satisfy writer interface, the type should implement function write.
+    c. Reader Interface helps handle different sources of input. ![sources of input](images/interfaces_need.png). It requires you to implement Reader interface and it contains Read function that outputs []byte. Reader interface gives common point of contact for all data types.  ![Reader_Interface](images/reader_interface.png)
+    d. Write interface = condensed form of Reader. ![Writer](images/writer.png)
+    e. Difference between Writer and Reader: ![Writer vs Reader](images/reader_vs_writer.png). To satisfy writer interface, the type should implement function write.
     e. io.Copy function: Take information from source and copy to destination. Source has to be something that implements Reader interface and destination should implement Reader interface
     
+10. Channels and Go Routines:
+- Used for concurrency
+
