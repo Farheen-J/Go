@@ -40,7 +40,7 @@
 - All Keys and all Values should be of same type
 
 8. Struct vs Map:
-- ![Difference](images/image.png)
+![Difference](images/image.png)
 
 9. Interfaces:
 - Problems that interfaces solve:
@@ -67,6 +67,20 @@
     e. Difference between Writer and Reader: ![Writer vs Reader](images/reader_vs_writer.png). To satisfy writer interface, the type should implement function write.
     e. io.Copy function: Take information from source and copy to destination. Source has to be something that implements Reader interface and destination should implement Reader interface
     
-10. Channels and Go Routines:
+10. Go Routines:
 - Used for concurrency
+- When we launch a go program we automatically create 1 Go routine. Go routine executes each line of code 1 by 1. ![Go](images/go_routine_1.png)
+- Go scheduler monitors the code inside each go routine. By default, go attempts to use only 1 cpu core ![structure](images/go_routine_1_cpu.png) 
+- Go scheduler can be configured to use multicore. Although, concurrency is not parallelism. Program is concurrent if it has ability to load up multiple threads for 1 program. It does not necessarily mean that they are running parallel. Parallelism needs multiple cores
+![structure](images/go_routine_multiple_cpu.png.png)
+- Go routines: Main and child routines
+![heirarchy](images/go_routine_2.png)
 
+11. Channels:
+- Main routine does not wait for the children routines to finish.
+![Execution](images/go_main_routine.png)
+Hence, we need channels to communicate between the routines. 
+- Channels is like text messaging. They are typed
+
+12. Function literals:
+- Same as lambda in Java, python etc 
